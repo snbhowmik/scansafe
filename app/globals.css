@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.8;
+  }
+  5% {
+    opacity: 0.9;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  35% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  45% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  65% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  95% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-flicker {
+  animation: flicker 2s infinite;
+}
+
