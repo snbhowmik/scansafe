@@ -3,10 +3,9 @@
 import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { AlertCircle, MapPin, Monitor, Skull, Shield } from "lucide-react"
+import { AlertCircle, MapPin, Monitor, Skull, Shield, Code } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import CyberAnzenLogo from "../components/cyberanzenlogo"
-import Image from "next/image"
 
 interface UserInfoCollectorProps {
   serverIp: string
@@ -265,7 +264,7 @@ export default function UserInfoCollector({ serverIp, textColor = "#ff0000" }: U
 
         <a
           href="https://forms.gle/ew3VKmjg9ecW8HEH6"
-          target="_blank'
+          target="_blank"
           rel="noopener noreferrer"
           className="inline-block"
         >
