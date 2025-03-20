@@ -263,10 +263,24 @@ export default function UserInfoCollector({ serverIp, textColor = "#ff0000" }: U
           <span className="text-lg font-semibold text-white">Stay safe online!</span>
         </div>
 
+        <a
+          href="https://forms.gle/ew3VKmjg9ecW8HEH6"
+          target="_blank'
+          rel="noopener noreferrer"
+          className="inline-block"
+        >
+
         <Button className="mt-2 bg-gray-800 hover:bg-gray-700 text-white" onClick={() => window.history.back()}>
           <Shield className="h-4 w-4 mr-2" />
           Return to Safety
         </Button>
+        </a>
+      <div className="mt-6 pt-4 border-t border-gray-700">
+          <p className="flex items-center justify-center gap-2 text-cyan-400">
+            <Code className="h-4 w-4" />
+            Developed by Mehbub
+          </p>
+        </div>
       </div>
     </div>
   )
