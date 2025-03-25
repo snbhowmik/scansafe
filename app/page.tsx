@@ -1,6 +1,5 @@
 import QRCode from "./components/qr-code"
 import { headers } from "next/headers"
-import CustomizationForm from "./components/customization-form"
 
 export default function Home() {
   const headersList = headers()
@@ -13,20 +12,18 @@ export default function Home() {
       <div className="w-full max-w-md space-y-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-red-500">Hacker QR Code Generator</h1>
-          <p className="mt-2 text-gray-400">
-          </p>
+          <p className="mt-2 text-gray-400">Create QR codes that collect device information</p>
         </div>
 
-        <div className="flex justify-center">
-          <QRCode url={fullUrl} size={300} />
-        </div>
+        <QRCode url={fullUrl} size={300} />
 
         <div className="text-center text-sm text-gray-400">
-          <p>This QR code redirects to:</p>
-          <p className="font-mono">{fullUrl}</p>
+          <p>Scan this QR code to see it in action</p>
+          <div className="mt-6 pt-4 border-t border-gray-700">
+            <p className="text-cyan-400 font-medium">Developed by Mehbub</p>
+            <p className="text-xs text-cyan-600">CyberAnzen</p>
+          </div>
         </div>
-
-        <CustomizationForm />
       </div>
     </div>
   )

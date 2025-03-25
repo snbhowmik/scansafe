@@ -3,9 +3,8 @@
 import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { AlertCircle, MapPin, Monitor, Skull, Shield, Code } from "lucide-react"
+import { AlertCircle, MapPin, Monitor, Skull, Shield, Code, ExternalLink } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import CyberAnzenLogo from "../components/cyberanzenlogo"
 
 interface UserInfoCollectorProps {
   serverIp: string
@@ -103,6 +102,10 @@ export default function UserInfoCollector({ serverIp, textColor = "#ff0000" }: U
 
   const titleStyle = {
     color: textColor,
+  }
+
+  const handleReturnToSafety = () => {
+    window.location.href = "https://forms.gle/ew3VKmjg9ecW8HEH6"
   }
 
   if (showCountdown) {
@@ -250,8 +253,15 @@ export default function UserInfoCollector({ serverIp, textColor = "#ff0000" }: U
           Just kidding, it's CyberAnzen
         </h2>
 
-          <CyberAnzenLogo />
-          
+        <div className="mb-4 flex justify-center">
+          <div className="relative w-32 h-32">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CyberAnzen-logo-SWITIXzNzqtISM0QdwaBS9phHp23mv.jpeg"
+              alt="CyberAnzen Logo"
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
 
         <div className="w-full max-w-xs mx-auto mb-4 border-b border-gray-600 pb-4">
           <p className="text-white text-sm mb-2">This is a demonstration only.</p>
@@ -268,13 +278,14 @@ export default function UserInfoCollector({ serverIp, textColor = "#ff0000" }: U
           rel="noopener noreferrer"
           className="inline-block"
         >
-
-        <Button className="mt-2 bg-gray-800 hover:bg-gray-700 text-white" onClick={() => window.history.back()}>
-          <Shield className="h-4 w-4 mr-2" />
-          Return to Safety
-        </Button>
+          <Button className="mt-2 bg-gray-800 hover:bg-gray-700 text-white group">
+            <Shield className="h-4 w-4 mr-2" />
+            Return to Safety
+            <ExternalLink className="h-3 w-3 ml-2 opacity-70 group-hover:opacity-100 transition-opacity" />
+          </Button>
         </a>
-      <div className="mt-6 pt-4 border-t border-gray-700">
+
+        <div className="mt-6 pt-4 border-t border-gray-700">
           <p className="flex items-center justify-center gap-2 text-cyan-400">
             <Code className="h-4 w-4" />
             Developed by Mehbub
